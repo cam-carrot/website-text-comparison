@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+    <form method="POST" action="/compare">
+        <label for="url1">URL 1:</label><br>
+        <input type="text" id="url1" name="url1"><br>
+        <label for="url2">URL 2:</label><br>
+        <input type="text" id="url2" name="url2"><br>
+        <input type="submit" value="Compare">
+    </form>
+
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" id="csvfile" name="csvfile" accept=".csv">
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
